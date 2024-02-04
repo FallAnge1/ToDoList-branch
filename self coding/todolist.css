@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+	color: whitesmoke;
+	overflow-x: hidden;
+}
+
+body {
+	background-color: #292929;
+}
+
+.container {
+	width: 100%;
+	min-height: 100vh;
+	padding: 10px;
+
+}
+
+.todo-app {
+	width: 100%;
+	max-width: 500px;
+	background-color: #333333;
+	padding: 30px;
+	margin: 100px auto 20px;
+	border-radius: 10px;
+	word-break: break-all;
+}
+
+.todo-app h2 {
+	font-size: 60px;
+	margin-bottom: 20px;
+	font-weight: 700;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: #525252;
+	border-radius: 20px;
+
+	transition: box-shadow 0.5s, transform 0.5s;
+}
+.row input {
+	width: 100%;
+	border: none;
+	border-radius: 20px;
+	height: 40px;
+	padding-left: 30px;
+	padding-right: 10px;
+	outline: none;
+	color: whitesmoke;
+	background-color: transparent;
+	font-size: 15px;
+	font-weight: 100;
+	user-select: none;
+}
+
+.row button {
+	border: none;
+	border-radius: 20px;
+	width: 100px;
+	background-color: #858585;
+	font-weight: 400;
+	font-size: 15px;
+	user-select: none;
+	cursor: pointer;
+
+}
+
+ul {
+	margin-top: 40px;
+	width: 100%;
+}
+
+ul li{
+	list-style: none;
+	padding: 25px 40px;
+	font-size: 25px;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	user-select: none;
+	transition: color 1s;
+}
+
+ul li::before {
+	content: "";
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	background-image: url(./img/unchecked\ white.png);
+	background-size: cover;
+	background-position: center;
+	top: 31px;
+	left: 3px;
+	transition: background-image 1s;
+}
+
+ul li.checked {
+	text-decoration: line-through;
+	color: #858585;
+}
+
+ul li.checked::before {
+	background-image: url(./img/checked\ white.png);
+}
+
+
+
+
+ul li button {
+	background-image: url(./img/delete.png);
+	background-color: #858585;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 20px;
+	height: 30px;
+	width: 75px;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: box-shadow 0.5s;
+}
+
+ul li button:hover {
+	box-shadow: 0px 0px 20px 0px rgb(255, 255, 255);
+}
+
+
+.row:hover {
+	box-shadow: 0px 0px 10px rgb(255, 255, 255);
+	transform: scale(1.06);
+}
+
+.row button:active {
+	transform: scale(0.95);
+}
+
+.hero {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;	
+	align-items: center;
+}
+
+.hero button {
+	width: 80px;
+	height: 40px;
+	background-color: #858585;
+	color: whitesmoke;
+	border: none;
+	border-radius: 20px;
+	font-size: 15px;
+	transition: box-shadow 0.5s, transform 0.1s;
+	margin-right: 10px;
+}
+
+.hero button:hover {
+	box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
+}
+
+.hero button:active {
+	transform: scale(0.9);
+}
